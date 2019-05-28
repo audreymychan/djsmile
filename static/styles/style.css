@@ -1,0 +1,208 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+/* Style the body */
+.row p {
+  font-family: 'Cardo', serif;
+  font-size: 20px;
+  padding: 25px;
+}
+
+/* Header/logo Title */
+.header {
+  text-align: center;
+  background: url("../images/header_background2.jpg");
+  color: black;
+  padding: 5px
+}
+
+/* Increase the font size of the heading */
+.header h1 {
+  font-family: LIBRARY3AM;
+  font-size: 70px;
+}
+
+.header h2 {
+  font-family: PandoramaDEMO-Regular;
+  font-size: 25px;
+}
+
+h3 {
+  font-family: 'Oswald', sans-serif;
+  text-transform: uppercase;
+  padding: 10px;
+}
+
+/* .navbar {
+  font-family: PandoramaDEMO-Regular;
+  letter-spacing: 2px;
+  font-size: 20px;
+}
+
+/* Sticky navbar - toggles between relative and fixed, depending on the scroll position. It is positioned relative until a given offset position is met in the viewport - then it "sticks" in place (like position:fixed). The sticky value is not supported in IE or Edge 15 and earlier versions. However, for these versions the navbar will inherit default position */
+/* .navbar {
+  overflow: hidden;
+  background-color: #333;
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+} */
+
+/* Style the navigation bar links */
+/* .navbar a {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 20px;
+  text-decoration: none;
+} */
+
+/* Right-aligned */
+/* .right {
+  float: right;
+} */
+
+/* Change color on hover */
+/* .navbar a:hover {
+  background-color: #ddd;
+  color: black;
+} */
+
+/* Active/current link */
+/* .navbar a.active {
+  background-color: #EDB230;
+  color: white;
+} */
+
+.column {
+  float: left;
+}
+
+.col_45 {
+  width: 45%;
+}
+
+.col_55 {
+  width: 55%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+.bubble
+{
+   position: relative;
+   width: 80%;
+   height: auto;
+   margin: 25px;
+   background: #ffffff;
+   -webkit-border-radius: 18px;
+   -moz-border-radius: 18px;
+   border-radius: 18px;
+   border: #333 solid 4px;
+}
+
+.bubble:after
+{
+    content: '';
+    position: absolute;
+    border-style: solid;
+    border-width: 0 17px 20px;
+    border-color: #ffffff transparent;
+    display: block;
+    width: 0;
+    z-index: 1;
+    top: -20px;
+    left: 28px;
+}
+
+.bubble:before
+{
+    content: '';
+    position: absolute;
+    border-style: solid;
+    border-width: 0 20px 23px;
+    border-color: #333 transparent;
+    display: block;
+    width: 0;
+    z-index: 0;
+    top: -27px;
+    left: 25px;
+}
+
+a {
+  text-decoration: none;
+  display: inline-block;
+  padding: 8px 16px;
+}
+
+a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.next {
+  background-color: #4CAF50;
+  color: white;
+  border-radius: 50%
+}
+
+.button{
+ display:inline-block;
+ padding:0.46em 1.6em;
+ border:0.1em solid #000000;
+ margin:0 0.2em 0.2em 0;
+ border-radius:0.12em;
+ box-sizing: border-box;
+ text-decoration:none;
+ font-family:'Roboto',sans-serif;
+ font-weight:300;
+ color:#000000;
+ text-shadow: 0 0.04em 0.04em rgba(0,0,0,0.35);
+ background-color:#FFFFFF;
+ text-align:center;
+ transition: all 0.15s;
+}
+
+.button:hover{
+ text-shadow: 0 0 2em rgba(255,255,255,1);
+ color:#FFFFFF;
+ border-color:#FFFFFF;
+}
+
+@media all and (max-width:30em){
+  .button{
+  display:block;
+  margin:0.4em auto;
+ }
+}
+
+/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+  }
+}
+
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+/* @media screen and (max-width: 400px) {
+  .navbar a {
+    float: none;
+    width: 100%;
+  }
+} */

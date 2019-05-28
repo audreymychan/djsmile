@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/style.css') }}">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='fonts/font.css') }}">
+  <link href="https://fonts.googleapis.com/css?family=Cardo:400,700|Oswald" rel="stylesheet">
+  <title>:)</title>
+</head>
+
+<body>
+
+  <div class="header">
+    <h1>DJ Smile</h1>
+    <h2>📸 Dad Jokes to capture your smile!</h2>
+
+     <a href="something" class="button" style="background-color:white;">Learn more</a>
+  </div>
+
+  </div>
+
+  <!-- <div class="navbar">
+    <a href="#" class="active">Live Feed</a>
+    <a href="#">About</a>
+  </div> -->
+
+  <div class="row">
+    <div class="column col_45">
+      <img src="{{ url_for('video_feed') }}" />
+    </div>
+    <div class="column col_55">
+      <div class="row">
+        <div class="sub_column">
+          <h3>Random DJ Generator:</h3>
+        </div>
+        <div class="sub_column">
+          <a href="#" class="next right">&#8250;</a>
+        </div>
+      </div>
+      <p class="bubble">{{ joke }}</p>
+    </div>
+
+</body>
+
+</html>

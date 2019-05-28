@@ -1,0 +1,23 @@
+@font-face {
+  font-family: 'LIBRARY3AM';
+  src: url('LIBRARY3AM.eot');
+  src: url('LIBRARY3AM.eot?#iefix') format('embedded-opentype'),
+       url('LIBRARY3AM.svg#LIBRARY3AM') format('svg'),
+       url('LIBRARY3AM.ttf') format('truetype'),
+       url('LIBRARY3AM.woff') format('woff'),
+       url('LIBRARY3AM.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'PandoramaDEMO-Regular';
+  src: url('PandoramaDEMO-Regular.eot');
+  src: url('PandoramaDEMO-Regular.eot?#iefix') format('embedded-opentype'),
+       url('PandoramaDEMO-Regular.svg#PandoramaDEMO-Regular') format('svg'),
+       url('PandoramaDEMO-Regular.ttf') format('truetype'),
+       url('PandoramaDEMO-Regular.woff') format('woff'),
+       url('PandoramaDEMO-Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
