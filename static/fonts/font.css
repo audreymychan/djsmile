@@ -9,15 +9,3 @@
   font-weight: normal;
   font-style: normal;
 }
-
-@font-face {
-  font-family: 'PandoramaDEMO-Regular';
-  src: url('PandoramaDEMO-Regular.eot');
-  src: url('PandoramaDEMO-Regular.eot?#iefix') format('embedded-opentype'),
-       url('PandoramaDEMO-Regular.svg#PandoramaDEMO-Regular') format('svg'),
-       url('PandoramaDEMO-Regular.ttf') format('truetype'),
-       url('PandoramaDEMO-Regular.woff') format('woff'),
-       url('PandoramaDEMO-Regular.woff2') format('woff2');
-  font-weight: normal;
-  font-style: normal;
-}
