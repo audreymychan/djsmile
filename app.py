@@ -14,7 +14,7 @@ joke = get_joke()
 
 @app.route('/')
 def index():
-    return render_template('index.html', joke = joke)
+    return render_template('index2.html', joke = joke)
 
 @app.route('/video_feed')
 def video_feed():

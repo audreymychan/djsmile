@@ -3,36 +3,79 @@
 
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dad Jokes for Smiles</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/style2.css') }}">
   <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='fonts/font.css') }}">
-  <title>:)</title>
+  <link href="https://fonts.googleapis.com/css?family=Merriweather|Montserrat&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" sizes="32x32" href="{{ url_for('static', filename='images/favicon-32x32.png') }}">
 </head>
 
 <body>
 
-  <!-- Navbar Image and text -->
-  <nav class="navbar sticky-top navbar-light" style="background-color: #EDB230;">
+  <!-- navbar -->
+  <nav class="navbar fixed-top navbar-dark navbar-translucent">
     <a class="navbar-brand" href="">
-      <img src="/static/images/smiley_face.png" width="30" height="30" class="d-inline-block align-top" alt="">
-      DJ SMILE
+      <img src="/static/images/dad.png" width="35" height="35" class="d-inline-block align-top" alt="logo">
+      Dad Jokes for Smiles
     </a>
   </nav>
 
-  <div class="container">
-    <div class="row main">
-      <h1>Built with Dad Jokes and Machine Learning to capture your smile!</h1>
-      <!-- <div class="w-100"></div> -->
+  <!-- carousel -->
+  <section class="carousel slide" data-ride="carousel">
+    <div class="carousel-inner d-flex h-100">
+      <div class="carousel-item active">
+        <img class="img-fluid" src="/static/images/smile_bg_1.png" alt="First slide">
+        <a class="bottom-right" href="http://www.freepik.com">Image designed by Katemangostar / Freepik</a>
+      </div>
+      <div class="carousel-item">
+        <img class="img-fluid" src="/static/images/smile_bg_2.png" alt="Second slide">
+        <a class="bottom-right" href="http://www.freepik.com">Image designed by Bearfotos / Freepik</a>
+      </div>
+      <div class="carousel-item">
+        <img class="img-fluid" src="/static/images/smile_bg_3.png" alt="Third slide">
+        <a class="bottom-right" href="http://www.freepik.com">Imaged designed by Freepik</a>
+      </div>
+      <!-- carousel content -->
+      <div class="carousel-content container">
+        <div class="row">
+          <div class="col-sm-12">
+            <div>
+              <h2 class="boxed">Dad jokes to put a smile on your face</h2>
+              <p class="boxed">Smile detection algorithm using deep learning convolutional neural networks</p>
+              <a class="btn btn-warning" href="#livefeed">Try it out ▼</a>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="row">
-      <h2>BlAHHHHH</h2>
-    </div>
-    <div class="row">
-      <h2>BlAHHHHH2</h2>
-    </div>
+  </section>
 
-  </div>
+  <section id="livefeed" class="row">
+    <div class="column col_45">
+      <img src="{{ url_for('video_feed') }}" />
+    </div>
+    <div class="column col_55">
+      <div class="row">
+        <div class="sub_column">
+          <h3>Random DJ Generator:</h3>
+        </div>
+        <div class="sub_column">
+          <a href="#" class="next right">&#8250;</a>
+        </div>
+      </div>
+      <p class="bubble">{{ joke }}</p>
+      <a class="btn btn-light" href="#about">LEARN MORE ▼</a>
+    </section>
+
+    <section id="about">
+
+    </section>
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
 </body>
 

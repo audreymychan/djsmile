@@ -1,11 +1,11 @@
 @font-face {
-  font-family: 'LIBRARY3AM';
-  src: url('LIBRARY3AM.eot');
-  src: url('LIBRARY3AM.eot?#iefix') format('embedded-opentype'),
-       url('LIBRARY3AM.svg#LIBRARY3AM') format('svg'),
-       url('LIBRARY3AM.ttf') format('truetype'),
-       url('LIBRARY3AM.woff') format('woff'),
-       url('LIBRARY3AM.woff2') format('woff2');
+  font-family: 'Helvetica-Condensed-Black';
+  src: url('Helvetica-Condensed-Black.eot');
+  src: url('Helvetica-Condensed-Black.eot?#iefix') format('embedded-opentype'),
+       url('Helvetica-Condensed-Black.svg#Helvetica-Condensed-Black') format('svg'),
+       url('Helvetica-Condensed-Black.ttf') format('truetype'),
+       url('Helvetica-Condensed-Black.woff') format('woff'),
+       url('Helvetica-Condensed-Black.woff2') format('woff2');
   font-weight: normal;
   font-style: normal;
 }
