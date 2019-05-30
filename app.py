@@ -25,7 +25,7 @@ def video_feed():
 
 @app.route('/', methods=['POST'])
 def update():
-    if request.form['next'] == '▶':
+    if request.form['next'] == '↻':
         return render_template('index.html', scroll='livefeed', joke=get_joke())
 
 

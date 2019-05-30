@@ -9,6 +9,7 @@
   <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/style.css') }}">
   <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='fonts/font.css') }}">
   <link href="https://fonts.googleapis.com/css?family=Merriweather|Montserrat&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Cardo:400,700|Oswald" rel="stylesheet">
   <link rel="icon" type="image/png" sizes="32x32" href="{{ url_for('static', filename='images/favicon-32x32.png') }}">
 </head>
 
@@ -55,13 +56,14 @@
   <!-- live feed and joke section -->
   <section id="livefeed">
     <div class="row">
-      <div class="col-8">
-        <img class="rounded" src="{{ url_for('video_feed') }}" alt="live video feed" />
+      <div class="col-7 video">
+        <img class="rounded border" src="{{ url_for('video_feed') }}" alt="live video feed" />
+        <a class="btn btn-warning mt-4" href="#about">LEARN MORE ▼</a>
       </div>
-      <div class="col-4">
+      <div class="col-5 joke">
         <div class="row">
           <div class="col">
-            <h3>Random Dad Joke Generator:</h3>
+            <img class="ml-4" src="/static/images/dad_black.png" alt="logo">
           </div>
         </div>
         <div class="row">
@@ -73,7 +75,7 @@
           <div class="col center">
 
             <form method="POST" action="/">
-              <input type="submit" class="btn btn-success btn-sm rounded-circle float-left" name="next" value="▶">
+              <input type="submit" class="btn btn-warning btn-sm rounded-circle float-right" name="next" value="↻">
             </form>
 
             {% if scroll %}
@@ -85,16 +87,103 @@
             {% endif %}
 
           </div>
-
         </div>
       </div>
-      <div class="row">
-        <a class="btn btn-light" href="#about">LEARN MORE ▼</a>
-      </div>
+    </div>
   </section>
 
   <!-- about section -->
   <section id="about">
+    <div class="container">
+      <h4>Learn the Process</h4>
+      <hr />
+      <h5>Smile detection applications are countless, from activating a camera shutter automatically, enhancing human-robot interaction, to being incorporated into assistive communication devices for people with disabilities.</h5>
+      <h5>Using deep learning convolutional neural network algorithms, an accuracy of 89% was achieved!</h5>
+      <hr />
+      <div class="row">
+        <div class="col-2">
+          <img src="/static/images/scraper.png" alt="scraper">
+        </div>
+        <div class="col-9">
+          <h6>Web Scraping</h6>
+          <p>Total of 8,600 images were scraped from Getty Images based on searches for "smile" and "no smile".</p>
+          <img src="/static/images/smile_example_1.jpg" width="100" alt="smile_example_1">
+          <img src="/static/images/smile_example_2.jpg" width="100" alt="smile_example_2">
+          <img src="/static/images/no_smile_example_1.jpg" width="100" alt="no_smile_example_1">
+          <img src="/static/images/no_smile_example_2.jpg" width="100" alt="no_smile_example_2">
+          <p><b>Tools:</b> requests, BeautifulSoup</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-2">
+          <img src="/static/images/edit.png" alt="edit">
+        </div>
+        <div class="col-9">
+          <h6>Image Pre-Processing</h6>
+          <p>Images collected were:</p>
+          <ul>
+            <li>cropped with a bounding box around faces detected</li>
+            <li>converted to grayscale</li>
+            <li>resized down to 100x100px</li>
+            <li>convert into an array</li>
+            <li>normalized</li>
+          </ul>
+          <p>Image dataset was split into a training set and a test set (for model evaluation).</p>
+          <p>Random transformations and normalization operations (i.e. adjusting for rotation and lighting) were
+            configured on the training set to create more variation for the model to learn.</p>
+          <img src="/static/images/grey_crop_smile_1.jpg" width="100" alt="grey_crop_smile_1">
+          <img src="/static/images/grey_crop_smile_2.jpg" width="100" alt="grey_crop_smile_2">
+          <img src="/static/images/grey_crop_no_smile_1.jpg" width="100" alt="grey_crop_no_smile_1">
+          <img src="/static/images/grey_crop_no_smile_2.jpg" width="100" alt="grey_crop_no_smile_2">
+          <p><b>Image to array example</b> (each pixel ranging from 0 to 255):</p>
+          <img src="/static/images/img_to_array.gif" width="150" alt="img_to_array">
+          <p><b>Tools:</b> PIL - Image, face_recognition, tensorflow.keras - array_to_img, img_to_array, ImageDataGenerator, to_categorical, sklearn - MinMaxScaler, LabelEncoder, train_test_split</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-2">
+          <img src="/static/images/training.png" alt="training">
+        </div>
+        <div class="col-9">
+          <h6>Training the Model - Convolutional Neural Network (CNN)</h6>
+          <p><b>1. Convolution Steps:</b> Aims to extract features, using small squares of input data.</p>
+          <p>Example of a convulated feature map from a 5 x 5 image and the 3 x 3 (filter) matrix:</p>
+          <img src="/static/images/convolution.gif" width="200" alt="convolution">
+          <p>Different filter matrices can detect different features from an image (i.e. edges, curves, etc.).</p>
+          <p>Example of two different filter matrice (outline red and green) sliding over an image to extract different features from an image:</p>
+          <img src="/static/images/convolution_2.gif" width="450" alt="convolution_2">
+          <p><b>2. RELU (Rectified Linear Unit) Steps:</b> Replaces all negative pixel values in the convulated feature map with zeros. Values of a feature map can range from -infinity to infinity. Without any bounds, "neurons" don't know when to
+            "fire" or not. RELU
+            helps determine when "neurons" should be activated.</p>
+          <img src="/static/images/relu.png" width="450" alt="relu">
+          <p><b>3. Pooling Steps:</b> Reduces dimensionality of a feature map.</p>
+          <p>Example of a Max Pooling operation:</p>
+          <img src="/static/images/max_pooling.png" width="350" alt="pooling">
+          <p><b>4. Fully Connected Layers:</b> The output from the convolutional and pooling layers represent high-level features of the input image. The purpose of the Fully Connected layer is to use these features for classifying the input image
+            into various classes (in our case, smile versus no smile) based on the training image dataset. </p>
+          <p><b>5. Training with Backpropagation:</b> Convolution + Pooling layers act as Feature Extractors from the input image while Fully Connected layer acts as a classifier.</p>
+          <p>Convolution neural networks can have any number of convolution, pooling, and fully connected layers and nodes.</p>
+          <p>Example of a convolution neural network for prediction a boat class:</p>
+          <img src="/static/images/convnet_training.png" width="600" alt="convnet_training">
+          <p>The training process consists of first initializing all filters and weights with random values. Then an image are put through the network to calculate its output probabilities for each class, along with the error. Based on the error, we
+            backpropagate through the network to update the weights to minimize errors. This process is repeated for all images in the training dataset, with the goal to minimize a loss function (i.e. accuracy).</p>
+          <p><b>Tools:</b> tensorflow.keras - Sequential, Input, Conv2D, MaxPooling2D, Dropout, Dense, Flatten, EarlyStopping</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-2">
+          <img src="/static/images/save.png" alt="training">
+        </div>
+        <div class="col-9">
+          <h6>Saving the Model</h6>
+          <p>The CNN model and weights learned can now be saved and used to predict smile versus no smile on any new image.</p>
+          <p><b>Tools:</b> sklearn - joblib, tensorflow.keras - save, load_model</p>
+        </div>
+      </div>
+      <div class="row">
+        <a class="btn btn-warning mx-auto mt-4" href="#livefeed">Back ▲</a>
+      </div>
+    </div>
 
   </section>
 
