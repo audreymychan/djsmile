@@ -118,6 +118,10 @@ ol {
   margin-left: 20px;
 }
 
+ol li:after {
+  font-weight: bold;
+}
+
 #about .container {
   padding-left: 70px;
   padding-right: 70px;
