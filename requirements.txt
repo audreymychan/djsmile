@@ -3,7 +3,7 @@ opencv-python==4.1.0.25
 face_recognition==1.2.3
 numpy==1.16.2
 requests==2.21.0
-bs4==4.7.1
+bs4==0.0.1
 joblib==0.12.5
 Keras==2.2.4
-PIL==5.4.1
+Pillow==6.0.0
