@@ -5,5 +5,5 @@ numpy==1.16.2
 requests==2.21.0
 bs4==4.7.1
 joblib==0.12.5
-tensorflow.keras=2.2.4-tf
-PIL=5.4.1
+tensorflow.keras==2.2.4-tf
+PIL==5.4.1
