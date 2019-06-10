@@ -2,7 +2,6 @@
 import cv2
 import face_recognition
 from smile_recognition import predict_smile
-import numpy as np
 
 # Camera object to capture live video feed and return image with face detected and smile predictions
 class Camera(object):
