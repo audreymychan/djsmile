@@ -1,10 +1,8 @@
-Flask==1.0.2
+Flask==1.0.3
 opencv-python==4.1.0.25
-dlib==19.17.0
 face_recognition==1.2.3
-numpy==1.16.2
-requests==2.21.0
-bs4==0.0.1
-joblib==0.12.5
-Keras==2.2.4
+requests==2.22.0
+joblib==0.13.2
+tensorflow==2.0.0a0
 Pillow==6.0.0
+numpy==1.16.2
