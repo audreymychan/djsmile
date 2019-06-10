@@ -1,3 +1,6 @@
+#!/usr/bin/env python3.6
+# -*- coding: utf-8 -*-
+
 from flask import Flask, request, render_template, Response, redirect, url_for
 from camera import Camera
 from generate_joke import get_joke
