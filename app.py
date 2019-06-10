@@ -4,6 +4,7 @@
 from flask import Flask, request, render_template, Response
 from camera import Camera
 from generate_joke import get_joke
+import pathlib
 
 app = Flask(__name__)
 
@@ -33,4 +34,8 @@ def update():
 
 
 if __name__ == '__main__':
-    app.run(host='127.0.0.1', debug=True, port="5000")
+    path = pathlib.Path('../devel_mode_on.txt')
+    if path.exists():
+        app.run(host='127.0.0.1', debug=True, port="5000")
+    else:
+        app.run(host='0.0.0.0', debug=True, port="80")
