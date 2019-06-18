@@ -49,3 +49,6 @@ if __name__ == "__main__":
 
             # Print scrapping status update
             print(f'Scraped {term}: Page {page}')
+
+    # Rename no smile directory according to snake case
+    os.rename('./images/no smile', './images/no_smile')
