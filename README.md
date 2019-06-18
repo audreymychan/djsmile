@@ -2,13 +2,13 @@
 
 > Smile detection app based on deep learning CNN models and a pinch of dad jokes
 
-**djsmile** is a Flask-powered web application to showcase a smile detection algorithm trained using convolutional neural networks. It takes input from a user's webcam and returns predictions on how much they're smiling! It also provides random dad jokes from *icanhazdadjoke*'s API for fun, because why not. 
+**djsmile** is a Flask-powered web application to showcase a smile detection algorithm trained using convolutional neural networks. It takes input from a user's webcam and returns predictions on how much they're smiling! It also provides random dad jokes from *icanhazdadjoke*'s API for fun and because why not.
 
-#### Motivation
+## Motivation
 Motivation came from a previous program I wrote to detect smiles 7 years ago, where the algorithm was based on my naive knowledge of what it means for someone to be smiling. For example, I detected the mouth using edge detection then identified smiles based on color pixel changes (red vs white). 
 
-#### Problem
-Of course, this was highly sensitive to noise (i.e. lighting, face orientation, etc). Now we can simply use machine learning to do a better job and remove human bias! CNNs can find new variables we didn't even know matter and their weights to improve our model. Hypothetically, it might determine how much ones's crow's feet around the eye impact smile predictions?
+## Problem
+Of course, this was highly sensitive to noise (i.e. lighting, face orientation, etc). Nowadays with more computing power, we can simply use machine learning to do a better job and remove human bias! CNNs can find new variables we didn't even know matter and their weights to improve our model. Hypothetically, it might determine how much ones's crow's feet around the eye impact smile predictions.
 
 ## Demo Video
 Click the screenshot below to see a demo.
@@ -20,7 +20,7 @@ Click the screenshot below to see a demo.
 ### <img src="./static/images/scraper.png" alt="scraper" width="30"/> Web Scraping
 Total of 8,600 images were scraped from Getty Images based on searches for "smile" and "no smile".
 
-Refer to `getty_scraping.py`
+Refer to `getty_scraper.py` and images folder
 
 Tools used: `requests`, `BeautifulSoup`
 
@@ -32,21 +32,21 @@ Images collected were then:
 - convert into an array
 - normalized
 
-Refer to `cnn_model_training.ipynb`
+Refer to `cnn_model_training.ipynb` and images folder
 
 Tools used: `PIL` - Image, `face_recognition`, `tensorflow.keras` - array_to_img, img_to_array, ImageDataGenerator, to_categorical, `sklearn` - MinMaxScaler, LabelEncoder, train_test_split
 
 ### <img src="./static/images/training.png" alt="training" width="30"/> Convolutional Neural Network (CNN)
 A convolutional neural network model was trained using the images.
 
-Refer to `cnn_model_training.ipynb` for layers and weights used
+Refer to `cnn_model_training.ipynb` for layers and weights used in the CNN
 
 Tools used: `tensorflow.keras` - Sequential, Input, Conv2D, MaxPooling2D, Dropout, Dense, Flatten, EarlyStopping
 
 ### <img src="./static/images/save.png" alt="save" width="30"/> Saving the Model
 The CNN model and weights learned were saved and can be used to predict smile versus no smile on any new image coming from the app. The model was saved under `my_model.h5` and MinMaxScaler under `scaler.save`.
 
-Refer to `cnn_model_training.ipynb`
+Refer to `cnn_model_training.ipynb` and models folder
 
 Tools: `sklearn` - joblib, `tensorflow.keras` - save, load_model
 
@@ -59,5 +59,9 @@ The app can be generated with the following files:
 
 ## Future Work
 - Publish the app online
+    - Make sure it's compatible on all platforms, devices, and camera settings
+- Improve the CNN model by optimizing its parameters
+- (nice to have) Improve UX/UI of the application
+
 
 *Keep smiling.. it makes people wonder what you are up to.*
