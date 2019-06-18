@@ -44,7 +44,8 @@ if __name__ == "__main__":
 
                 img_url = img['src']
                 # Save image
-                urllib.request.urlretrieve(img_url, f'{file_path}/{img_no}.jpg')
+                urllib.request.urlretrieve(img_url,
+                                           f'{file_path}/{img_no}.jpg')
                 img_no += 1
 
             # Print scrapping status update
