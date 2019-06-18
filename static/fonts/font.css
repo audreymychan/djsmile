@@ -2,10 +2,10 @@
   font-family: 'Helvetica-Condensed-Black';
   src: url('Helvetica-Condensed-Black.eot');
   src: url('Helvetica-Condensed-Black.eot?#iefix') format('embedded-opentype'),
-       url('Helvetica-Condensed-Black.svg#Helvetica-Condensed-Black') format('svg'),
-       url('Helvetica-Condensed-Black.ttf') format('truetype'),
-       url('Helvetica-Condensed-Black.woff') format('woff'),
-       url('Helvetica-Condensed-Black.woff2') format('woff2');
+    url('Helvetica-Condensed-Black.svg#Helvetica-Condensed-Black') format('svg'),
+    url('Helvetica-Condensed-Black.ttf') format('truetype'),
+    url('Helvetica-Condensed-Black.woff') format('woff'),
+    url('Helvetica-Condensed-Black.woff2') format('woff2');
   font-weight: normal;
   font-style: normal;
 }
