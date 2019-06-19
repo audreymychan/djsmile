@@ -11,8 +11,8 @@ import numpy as np
 img_width, img_height = (100, 100)
 
 # Scaler and model imports
-scaler = joblib.load('scaler.save')
-model = load_model('my_model.h5')
+scaler = joblib.load('./models/scaler.save')
+model = load_model('./models/my_model.h5')
 model.compile(loss='binary_crossentropy', optimizer='adam',
               metrics=['accuracy'])
 
