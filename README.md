@@ -60,7 +60,13 @@ The app can be generated with the following files:
 ## Future Work
 - Publish the app online
     - Make sure it's compatible on all platforms, devices, and camera settings
-- Improve the CNN model by optimizing its parameters
+- Improve the CNN model
+    - Some ideas for improvements include:
+        - Relabel dataset to ensure images are correctly categorized as smile or no smile
+        - Optimizing neural network parameters
+        - Increasing dataset
+        - Using larger image sizes
+        - Using RGB images instead of grayscale
 - (nice to have) Improve UX/UI of the application
 
 
