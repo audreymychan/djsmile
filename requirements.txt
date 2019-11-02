@@ -4,5 +4,5 @@ face_recognition==1.2.3
 requests==2.22.0
 joblib==0.13.2
 tensorflow==2.0.0a0
-Pillow==6.0.0
+Pillow==6.2.0
 numpy==1.16.2
